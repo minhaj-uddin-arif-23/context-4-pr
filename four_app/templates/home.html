@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!-- Back end teka data nia ase html file ah bah website ah show kora jonno Author : {{d.author}}-->
+    
+    <h1> \ This is contest Page / </h1>
+    <h2>Author : {{data.author}}</h2>
+    <h2> age : {{data.age}}</h2>
+
+    {{data.List}}
+    <h3>{{ data.List | join:" - " }}</h3>
+
+ {% if data.age >= 20 %}
+         <h4>You are able to get driving license </h4>
+    {% elif data.age >= 10 and data.age <= 19 %}
+         <h4> you are not able to get license </h4>
+    {% else %}
+        <h4>you are a child </h4>
+    {% endif %} 
+    
+
+    <!-- For Loop -->
+    {% for i in courses %}
+    <h3>{{i.id}} {{i.name}} {{i.fee}}</h3>
+    {% endfor %}
+
+</body>
+</html>
